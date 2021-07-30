@@ -1,0 +1,20 @@
+def addnote(size, content):
+    p.recvuntil(":")
+    p.sendline("1")
+    p.recvuntil(":")
+    p.sendline(str(size))
+    p.recvuntil(":")
+    p.sendline(content)
+
+def delnote(idx):
+    p.recvuntil(":")
+    p.sendline("2")
+    p.recvuntil(":")
+    p.sendline(str(idx))
+
+
+def printnote(idx):
+    p.recvuntil(":")
+    p.sendline("3")
+    p.recvuntil(":")
+    p.sendline(str(idx))

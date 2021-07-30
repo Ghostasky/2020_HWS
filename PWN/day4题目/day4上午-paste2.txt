@@ -1,0 +1,21 @@
+def new(s,c):
+    p.recvuntil('>')
+    p.sendline('1')
+    p.recvuntil('size')
+    p.sendline(str(s))
+    p.recvuntil('data')
+    p.send(c)
+    
+
+def delete(i):
+    p.recvuntil('>')
+    p.sendline('2')
+    p.recvuntil('index')
+    p.sendline(str(i))
+    
+
+def show(i):
+    p.recvuntil('>')
+    p.sendline('3')
+    p.recvuntil('index?')
+    p.sendline(str(i))

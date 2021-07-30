@@ -1,0 +1,15 @@
+def alloca(i,c,data):
+    p.recvuntil('>>>')
+    p.sendline('1')
+    p.recvuntil('idx:')
+    p.sendline(str(i))
+    p.recvuntil('len:')
+    p.sendline(str(c))
+    p.recvuntil('content:')
+    p.send(data)
+
+def free(i):
+    p.recvuntil('>>>')
+    p.sendline('2')
+    p.recvuntil('idx:')
+    p.sendline(str(i))

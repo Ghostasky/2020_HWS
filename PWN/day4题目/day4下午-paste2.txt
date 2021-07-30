@@ -1,0 +1,49 @@
+def add(s):
+
+    p.recvuntil('----------menu----------')
+
+    p.sendline('1')
+
+    p.recvuntil('content:')
+
+    p.send(s)
+
+
+
+def edit(i,s):
+
+    p.recvuntil('----------menu----------')
+
+    p.sendline('2')
+
+    p.recvuntil('string:')
+
+    p.sendline(str(i))
+
+    p.recvuntil('content:')
+
+    p.send(s)
+
+
+
+def dele(i):
+
+    p.recvuntil('----------menu----------')
+
+    p.sendline('3')
+
+    p.recvuntil('string:')
+
+    p.sendline(str(i))
+
+
+
+def show(i):
+
+    p.recvuntil('----------menu----------')
+
+    p.sendline('4')
+
+    p.recvuntil('string:')
+
+    p.sendline(str(i))

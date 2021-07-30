@@ -1,0 +1,16 @@
+def add(i,c):
+    p.sendlineafter('>','1')
+    p.recvuntil('id')
+    p.sendline(str(i))
+    p.sendafter('input',c)
+
+def edit(i,c):
+    p.sendlineafter('>','3')
+    p.recvuntil('id')
+    p.sendline(str(i))
+    p.sendafter('input',c)
+
+def dele(i):
+    p.sendlineafter('>','2')
+    p.recvuntil('id')
+    p.sendline(str(i))
